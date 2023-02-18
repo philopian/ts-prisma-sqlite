@@ -20,7 +20,7 @@ async function main() {
   console.log(`[UPDATED USER]`, updatedUser)
 
   // Delete
-  const deletedUser = await deleteUser()
+  const deletedUser = await deleteUser(2)
   console.log(`[DELETED USER]`, deletedUser)
 
   const whatsLeftInTheDM = await getAllUsers()
