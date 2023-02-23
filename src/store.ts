@@ -1,8 +1,16 @@
-import { PrismaClient } from '@prisma/client'
+import prisma from './prisma'
 
-const prisma = new PrismaClient()
+interface CreateUser {
+  name: string
+  email: string
+}
+interface UpdateUser {
+  id: number
+  name: string
+  email: string
+}
 
-export async function createUser({ name, email }: { name: string; email: string }) {
+export async function createUser({ name, email }: CreateUser) {
   try {
     const user = await prisma.user.create({
       data: {
@@ -16,7 +24,7 @@ export async function createUser({ name, email }: { name: string; email: string 
   }
 }
 
-export async function getUser({ id }: { id: number }) {
+export async function getUser(id: number) {
   const users = await prisma.user.findFirst({
     where: { id },
   })
@@ -28,7 +36,7 @@ export async function getAllUsers() {
   return users
 }
 
-export async function updateUser({ id, name, email }: { id: number; name: string; email: string }) {
+export async function updateUser({ id, name, email }: UpdateUser) {
   try {
     const user = await prisma.user.update({
       where: { id },

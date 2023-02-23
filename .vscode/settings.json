@@ -33,10 +33,30 @@
     {
       "previewLimit": 50,
       "driver": "SQLite",
-      "database": "${workspaceFolder:ts-prisma-sqlite}/prisma/dev.db",
-      "name": "prisma-db"
+      "name": "prisma-db",
+      "database": "${workspaceFolder:ts-prisma-sqlite}/prisma/dev.db"
     }
   ],
   "sqltools.useNodeRuntime": true,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#91d095",
+    "activityBar.background": "#91d095",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#7e79c6",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#91d095",
+    "statusBar.background": "#6dc173",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#4bb052",
+    "statusBarItem.remoteBackground": "#6dc173",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#6dc173",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#6dc17399",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#6dc173",
   
 }
